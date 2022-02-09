@@ -2,11 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!--прописываем стили в странице-->
+    <style>
+        b
+        {
+            color: #00CC00;
+        }
+    </style>
+    <!--подключаем внешний файл с таблицами стилей-->
+    <link href="index.css" rel="stylesheet" type="text/css">
     <title>Title</title>
 </head>
 <body>
-    <div>Тестовая страница</div>
-    <div>поправлен текст в веб-версии</div>
-    <div>Внесены изменения с рабочей сатнции</div>
+    <div class="border_blue">Блок <b>DIV</b> с классом синяя грацница 1px слошная</div>
+    <span class="border_blue">Блок <b>SPAN</b> c синей границей</span>
+    <p class="border_blue">Блок <b>P</b> c синей границей</p>
+    <div style="border: 1px solid #0000FF; text-align: center;">Ту же самую рамку прописываем в атрибут <b>style</b>+выравнивание текста по центру</div>
+    <h1 style="text-align: center;">Работа с таблицами</h1>
+    <div>
+        <table class="table_1">
+            <tr><th>№ п/п</th><th>Наименование</th><th>Кол-во</th><th>Цена</th><th>Сумма</th></tr>
+            <tr><td colspan="5" class="tbl_group">Группа товаров 1</td></tr>
+            <tr><td class="tbl_N">1.</td><td class="tbl_Name">Товар 1</td><td class="tbl_Count">1</td><td class="tbl_Price">10.00</td><td class="tbl_Sum">10.00</td></tr>
+            <tr><td class="tbl_N">2.</td><td class="tbl_Name">Товар 1</td><td class="tbl_Count">1</td><td class="tbl_Price">10.00</td><td class="tbl_Sum">10.00</td></tr>
+            <tr><td class="tbl_N">3.</td><td class="tbl_Name">Товар 1</td><td class="tbl_Count">1</td><td class="tbl_Price">10.00</td><td class="tbl_Sum">10.00</td></tr>
+            <tr class="tbl_Select"><td class="tbl_N">4.</td><td class="tbl_Name">Товар 1</td><td class="tbl_Count">1</td><td class="tbl_Price">10.00</td><td class="tbl_Sum">10.00</td></tr>
+            <tr><td class="tbl_N">5.</td><td class="tbl_Name">Товар 1</td><td class="tbl_Count">1</td><td class="tbl_Price">10.00</td><td class="tbl_Sum">10.00</td></tr>
+            <tr><td colspan="5" class="tbl_group">Группа товаров 2</td></tr>
+            <tr><td class="tbl_N">6.</td><td class="tbl_Name">Товар 1</td><td class="tbl_Count">1</td><td class="tbl_Price">10.00</td><td class="tbl_Sum">10.00</td></tr>
+            <tr><td class="tbl_N">7.</td><td class="tbl_Name">Товар 1</td><td class="tbl_Count">1</td><td class="tbl_Price">10.00</td><td class="tbl_Sum">10.00</td></tr>
+            <tr><td colspan="4" class="tbl_Itog">Итого сумма:</td><td class="tbl_SumItog">ХХХ.хх</td></tr>
+        </table>
+    </div>
 </body>
 </html>
