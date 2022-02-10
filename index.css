@@ -78,3 +78,44 @@ div b
 {
     background-color: #FF8800;
 }
+
+.table_2
+{
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    width: 500px;
+    margin: 50px auto;
+}
+.table_2 td.inp input, .table_2 td select, .table_2 td textarea
+{
+    width: 300px;
+    border: 1px solid #0000FF;
+}
+
+div.spisok_1 a
+{
+    text-decoration: none;
+    color: #0000FF;
+}
+div.spisok_1 a:hover
+{
+    text-decoration: underline;
+    color: #FF0000;
+}
+div.spisok_2 a
+{
+    text-decoration: none;
+    color: #0000FF;
+}
+div.spisok_2 a:hover
+{
+    text-decoration: none;
+    color: #00ccFF;
+}
+div.spisok_2 li
+{
+    display: inline;
+    padding: 4px;
+    margin-right: 10px;
+    border: 1px solid #0000FF;
+}

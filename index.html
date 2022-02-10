@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="border_blue">Блок <b>DIV</b> с классом синяя грацница 1px слошная</div>
-    <span class="border_blue">Блок <b>SPAN</b> c синей границей</span>
+    <span class="border_blue">Блок <b>SPAN</b> c синей границей</span><span class="border_blue">Блок <b>SPAN</b> c синей границей</span><span class="border_blue">Блок <b>SPAN</b> c синей границей</span>
     <p class="border_blue">Блок <b>P</b> c синей границей</p>
     <div style="border: 1px solid #0000FF; text-align: center;">Ту же самую рамку прописываем в атрибут <b>style</b>+выравнивание текста по центру</div>
     <h1 style="text-align: center;">Работа с таблицами</h1>
@@ -34,6 +34,50 @@
             <tr><td class="tbl_N">7.</td><td class="tbl_Name">Товар 1</td><td class="tbl_Count">1</td><td class="tbl_Price">10.00</td><td class="tbl_Sum">10.00</td></tr>
             <tr><td colspan="4" class="tbl_Itog">Итого сумма:</td><td class="tbl_SumItog">ХХХ.хх</td></tr>
         </table>
+    </div>
+
+    <div>
+        <form action="/" METHOD="post" enctype="multipart/form-data">
+        <input type="hidden" name="id">
+        <table class="table_2">
+            <tr><td>ФИО:</td><td class="inp"><input type="text" name="fio"></td></tr>
+            <tr><td>Адрес:</td><td class="inp"><textarea name="adress" rows="2"></textarea></td></tr>
+            <tr><td>E-mail:</td><td class="inp"><input type="email" name="adress"></td></tr>
+            <tr><td>Телефон:</td><td class="inp"><input type="tel" name="adress"></td></tr>
+            <tr><td>Наличие авто:</td><td><input type="checkbox" name="avto"></td></tr>
+            <tr><td>Марка авто:</td><td class="inp">
+                <select name="marka_avto">
+                    <option value="1">Марка 1</option>
+                    <option value="2">Марка 2</option>
+                    <option value="3" selected>Марка 3</option>
+                    <option value="4">Марка 4</option>
+                </select>
+            </td></tr>
+            <tr><td>Наличие вод.удостоверения</td><td><input type="radio" name="vu" id="vu_yes"><label for="vu_yes">Да</label><input type="radio" name="vu" id="vu_no" checked><label for="vu_no">нет</label></td></tr>
+            <tr><td>Прикрепить фото</td><td><input type="file" name="file"></td></tr>
+            <tr><td colspan="2" style="text-align: center; padding-top: 10px;"><input type="submit" name="send" value="Отправить"> <input type="submit" name="cancel" value="Отмена"></td></tr>
+
+        </table>
+        </form>
+    </div>
+
+    <div class="spisok_1">
+        <ul>
+            <li><a href="#">ссылка 1</a></li>
+            <li><a href="#">ссылка 2</a></li>
+            <li><a href="#">ссылка 3</a></li>
+            <li><a href="#">ссылка 4</a></li>
+            <li><a href="#">ссылка 5</a></li>
+        </ul>
+    </div>
+    <div class="spisok_2">
+        <ul>
+            <li><a href="#">ссылка 1</a></li>
+            <li><a href="#">ссылка 2</a></li>
+            <li><a href="#">ссылка 3</a></li>
+            <li><a href="#">ссылка 4</a></li>
+            <li><a href="#">ссылка 5</a></li>
+        </ul>
     </div>
 </body>
 </html>
