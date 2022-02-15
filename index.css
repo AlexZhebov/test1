@@ -119,3 +119,35 @@ div.spisok_2 li
     margin-right: 10px;
     border: 1px solid #0000FF;
 }
+
+.table_3
+{
+    border-collapse: collapse;
+    border: 0px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.table_3 td
+{
+    border: 1px solid #212121;
+    text-align: center;
+}
+.table_3 td.txtAlignLeft
+{
+    text-align: left;
+}
+.table_3 td.colspan5
+{
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
+}
+.table_3 tr.zagolovok td
+{
+    text-align: center;
+    font-weight: bold;
+    height: 30px;
+    vertical-align: middle;
+    background-color: #cccccc;
+}

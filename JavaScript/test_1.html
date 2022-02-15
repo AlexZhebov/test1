@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Тестовые задания JavaScript</title>
+    <link href="../index.css" rel="stylesheet" type="text/css">
+    <script>
+
+        var Person = {
+            firstName: "",
+            lastName: "",
+            city: "",
+            dataR: "",
+            age() {
+                let dp = this.dataR.split("."); // разделяем дату по точкам на массив
+                let today = new Date();
+                let year = today.getFullYear();
+                return (year - dp[2]);
+            }
+        };
+
+        var arrPerson = [];
+
+        /*
+        Функция добавления в массив
+         */
+        function addPerson() {
+            let p = {};
+            p.__proto__ = Person;
+            p.firstName = document.getElementById("firstName").value;
+            p.lastName = document.getElementById("lastName").value;
+            p.city = document.getElementById("city").value;
+            p.dataR = document.getElementById("dataR").value;
+            arrPerson.push(p);
+
+            AllPersonToDiv(); // обновим див блок
+        }
+
+        /*
+        Функция вывода всех персон в сообщения
+         */
+        function alertAllPerson() {
+            alert("Количество записей в массиве: " + arrPerson.length);
+            for (var i = 0; i < arrPerson.length; i++) {
+                alert("№ " + (i + 1) + "\n" + arrPerson[i].firstName + " " + arrPerson[i].lastName +
+                    " (" + arrPerson[i].city + ") " + ", возраст" + arrPerson[i].age());
+            }
+        }
+
+        /*
+        Функция вывода всех персон в таблицу DIV блока
+         */
+        function AllPersonToDiv() {
+            let html = "";
+            html = "<table class='table_1' style='margin-top: 50px;'>";
+            html += "<tr><td>№</td><td>ФИО</td><td>Город</td><td>Дата рождения</td><td>Возраст</td></tr>";
+
+
+            for (var i = 0; i < arrPerson.length; i++) {
+                html += "<tr><td>" + (i + 1) + "</td><td>" + arrPerson[i].firstName + " " + arrPerson[i].lastName +
+                    "</td><td>" + arrPerson[i].city + "</td><td>" + arrPerson[i].dataR +
+                    "</td><td>" + arrPerson[i].age() + "</td></tr>";
+            }
+            if (arrPerson.length==0) {
+                html += "<tr><td colspan='5'>В массиве нет записей</td></tr>";
+            }
+            html += "</table>";
+
+            document.getElementById("person").innerHTML = html;
+        }
+
+    </script>
+</head>
+<body>
+
+Имя: <input type="text" id="firstName" value="Имя 1">
+Фамилия: <input type="text" id="lastName" value="Фамилия 1">
+Город: <input type="text" id="city" value="Город 1">
+Дата рождения: <input type="text" id="dataR" value="01.01.2000">
+<input type="button" value="Добавить" id="addPerson" onClick="addPerson();">
+
+<input type="button" value="Вывести список с массива" onClick="alertAllPerson();">
+<input type="button" value="Вывести список с массива в DIV" onClick="AllPersonToDiv();">
+
+<div id="person">
+
+</div>
+
+</body>
+</html>
