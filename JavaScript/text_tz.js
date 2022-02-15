@@ -14,12 +14,15 @@ function create_find_block()
         // вставляем в переменную html выпадающий список с типом поиска
         let html="<select name='type' onchange='ChangeType("+i+", this)'>";
         let sel="";
-        for (var j=0; j<type_.length; j++)
-        {
-            if (fb[i][0]==j){sel=" selected";} else {sel="";}
-            html+="<option value='"+j+"'"+sel+">"+type_[j]+"</option>";
+        for (var j = 0; j < type_.length; j++) {
+            if (fb[i][0] == j) {
+                sel = " selected";
+            } else {
+                sel = "";
+            }
+            html += "<option value='" + j + "'" + sel + ">" + type_[j] + "</option>";
         }
-        html+="</select>";
+        html += "</select>";
 
         // формируем выпадающий список с условием поиска
         html+="<select name='operator' onchange='ChangeOperator("+i+", this)'>";
