@@ -1,7 +1,11 @@
-body
+html body
 {
     font-family: Arial;
     font-size: 14px;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 .border_blue
 {
@@ -132,7 +136,8 @@ div.spisok_2 li
 {
     border: 1px solid #212121;
     text-align: center;
-    height: 50px;
+    height: 20px;
+    vertical-align: middle;
 }
 .table_3 td.txtAlignLeft
 {
@@ -151,4 +156,70 @@ div.spisok_2 li
     height: 30px;
     vertical-align: middle;
     background-color: #cccccc;
+}
+
+img.button {
+    cursor: pointer;
+}
+div#AllScreenTransparent {
+    border: 0px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+    background: #CDD6DB;
+    opacity: 0.8;
+    display: none;
+}
+
+div#AllScreen {
+    border: 0px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+    display: none;
+}
+div#AllScreen div.AddPersonBlock {
+    border: 1px solid #000000;
+    width: 500px;
+    margin: 150px auto;
+    background-color: #ffffff;
+    padding: 10px;
+
+}
+div.AddPersonBlock span {
+    width: 200px;
+    display: inline-block;
+    text-align: left;
+}
+
+div.AddPersonBlock div {
+    padding-top: 5px;
+}
+div.AddPersonBlock input {
+    width: 290px;
+    display: inline-block;
+    border: 1px solid #00bfff;
+}
+
+div.AddPersonBlock div {
+    text-align: center;
+}
+
+div.buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+div.buttons input {
+    width: 120px;
+}
+
+div#formZagolovok {
+    font-weight: bold;
+    color: #0000FF;
+    font-size: 16px;
 }
