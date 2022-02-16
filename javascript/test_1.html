@@ -4,26 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Тестовые задания JavaScript</title>
     <link href="../index.css" rel="stylesheet" type="text/css">
+    <script defer src="test_1.js"></script>
     <script>
 
-        var Person = {
-            firstName: "",
-            lastName: "",
-            city: "",
-            dataR: "",
-            age() {
-                let dp = this.dataR.split("."); // разделяем дату по точкам на массив
-                let today = new Date();
-                let year = today.getFullYear();
-                return (year - dp[2]);
-            }
-        };
 
-        var arrPerson = [];
-
-        /*
+        /**
         Функция добавления в массив
-         */
+         **/
         function addPerson() {
             let p = {};
             p.__proto__ = Person;
@@ -36,9 +23,9 @@
             AllPersonToDiv(); // обновим див блок
         }
 
-        /*
+        /**
         Функция вывода всех персон в сообщения
-         */
+         **/
         function alertAllPerson() {
             alert("Количество записей в массиве: " + arrPerson.length);
             for (var i = 0; i < arrPerson.length; i++) {
@@ -47,9 +34,9 @@
             }
         }
 
-        /*
+        /**
         Функция вывода всех персон в таблицу DIV блока
-         */
+         **/
         function AllPersonToDiv() {
             let html = "";
             html = "<table class='table_1' style='margin-top: 50px;'>";
