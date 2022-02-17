@@ -130,12 +130,26 @@ function reverseDate(data) {
  * @param i
  */
 function editPerson(i) {
-    alert("функция в разарботке");
+    document.getElementById("error").innerHTML = "";
+    document.getElementById("index_person").innerHTML = i;
+    document.getElementById("addPerson").value = "Редактировать";
+    document.getElementById("formZagolovok").innerHTML = "Редактирование персоны";
+    document.getElementById("firstName").value = arrPerson[i].firstName;
+    document.getElementById("lastName").value = arrPerson[i].lastName;
+    document.getElementById("city").value = arrPerson[i].city;
+    document.getElementById("dataR").value = arrPerson[i].dataR;
+
+    bgTransparent.style.display="block";
+    formAddPerson.style.display="block";
 }
 /**
  * Функция открытия формы добавления персоны
  */
 function openFormPerson() {
+    document.getElementById("error").innerHTML = "";
+    document.getElementById("index_person").innerHTML = "-1";
+    document.getElementById("addPerson").value = "Добавить";
+    document.getElementById("formZagolovok").innerHTML = "Добавление персоны";
     bgTransparent.style.display="block";
     formAddPerson.style.display="block";
 }
@@ -152,16 +166,43 @@ function deletePerson(i) {
  * Функция добавления в массив
  **/
 function addPerson() {
+    // проверка корректности ввода данных
+    var err = document.getElementById("error");
     let p = {};
+
     p.__proto__ = Person;
     p.firstName = document.getElementById("firstName").value;
     p.lastName = document.getElementById("lastName").value;
     p.city = document.getElementById("city").value;
-    //alert(document.getElementById("dataR").value);
     p.dataR = document.getElementById("dataR").value;
-    arrPerson.push(p);
 
+    if (p.firstName.length < 1) {
+        err.innerHTML = "Введите <b>Имя</b> человека <br>";
+        return;
+    }
+
+    if (p.lastName.length < 1) {
+        err.innerHTML = "Введите <b>Фамилию</b> человека <br>";
+        return;
+    }
+
+    if (p.city.length < 1) {
+        err.innerHTML = "Введите <b>Город</b> человека <br>";
+        return;
+    }
+    var id = Number(document.getElementById("index_person").value);
+    if (id == -1) {
+        arrPerson.push(p);
+    } else {
+        arrPerson[id].firstName = p.firstName;
+        arrPerson[id].lastName = p.lastName;
+        arrPerson[id].city = p.city;
+        arrPerson[id].dataR = p.dataR;
+    }
+
+    cancelPerson();
     AllPersonToDiv(); // обновим див блок
+
 }
 
 /**
